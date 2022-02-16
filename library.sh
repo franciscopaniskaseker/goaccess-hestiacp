@@ -145,7 +145,7 @@ executeGoaccess()
 		goaccess -p /etc/goaccess/goaccess.conf -a > $public_report_file
 		chown ${report_user}:${report_group} $public_report_file
 		i=$(($i+1))
-		sleep 60
+		sleep $update_frequency
 	done
 }
 
