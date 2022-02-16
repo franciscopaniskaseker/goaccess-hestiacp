@@ -1,5 +1,5 @@
-## Requirements
-# setup goaccess
+# Requirements
+## setup goaccess
 Ubuntu:
 ```bash
 wget -O - https://deb.goaccess.io/gnugpg.key | gpg --dearmor | sudo tee /usr/share/keyrings/goaccess.gpg >/dev/null
@@ -16,9 +16,9 @@ yum install goaccess
 other distros:
 https://goaccess.io/download#distro
 
-## setup this git script
+# setup this git script
 
-# setup
+## setup
 Just execute:
 
 ```bash
@@ -26,7 +26,9 @@ sudo bash install.sh USER GROUP /PATH/TO/REPORT/report.html
 ```
 
 USER means the hestiacp or linux user that you want to own the report.
+
 GROUP means the hestiacp or linux user that you want to set in the report.
+
 /PATH/TO/REPORT/report.html is the PATH of the report.html where the port will be stored.
 
 Example:
