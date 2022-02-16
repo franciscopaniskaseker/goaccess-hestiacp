@@ -1,6 +1,6 @@
 installSystemdUnit()
 {
-	cat <<EOF> /etc/systemd/system/hestiacp-goaccess.service
+	cat <<EOF> /etc/systemd/system/goaccess-hestiacp.service
 [Unit]
 Description=Goaccess Web log report.
 After=network.target
@@ -19,7 +19,7 @@ StandardError=null
 WantedBy=multi-user.target
 EOF
 	systemctl daemon-reload
-	systemctl enable --now hestiacp-goaccess
+	systemctl enable --now goaccess-hestiacp
 }
 
 
