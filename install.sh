@@ -14,6 +14,7 @@ main()
 report_user=$report_user
 report_group=$report_group
 public_report_file=$public_report_file
+update_frequency=$update_frequency
 EOF
 
 	installSystemdUnit
@@ -27,7 +28,7 @@ goaccess_hestiacp_command=/usr/bin/goaccess-hestiacp
 report_user=$1
 report_group=$2
 public_report_file=$3
-
+update_frequency=60
 # main
 main
 
