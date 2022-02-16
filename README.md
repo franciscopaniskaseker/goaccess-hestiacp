@@ -40,7 +40,7 @@ The Goaccess report will be stored in "/home/admin/web/mydomain.com/public_html/
 
 Notes:
 - if you intend to store the report under hestiacp user, the group will have the same name of user.
-- if you did some mistake or you want to change the user, group or report.html path, you can (1) just install or (2) edit /etc/goaccess-hestiacp.conf file
+- if you did some mistake or you want to change the user, group or report.html path, you can (1) just install again (do not need to remove) or (2) edit /etc/goaccess-hestiacp.conf file
 
 
 ## Uninstall procedure
@@ -50,3 +50,23 @@ Just execute
 ```bash
 ./uninstall.sh
 ```
+
+# Frequent asked questions (FAQ)
+### Where I can find the logs to check eventual errors?
+As this is installed using systemd unit, you can check eventual errors in the journalctl:
+```bash
+journalctl -u goaccess-hestiacp
+``` 
+or to see the log in real time:
+```bash
+journalctl -u goaccess-hestiacp -f
+```
+### Which is the frequency of Goaccess report update?
+By default is 60 seconds. You can change this frequency editing the variable update_frequency (in seconds) into the file /etc/goaccess-hestiacp.conf.
+
+Example:
+```bash
+update_frequency=120
+```
+
+This mean 120 seconds.
