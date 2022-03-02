@@ -20,6 +20,9 @@ WantedBy=multi-user.target
 EOF
 	systemctl daemon-reload
 	systemctl enable --now goaccess-hestiacp
+
+	# if user is overriding the config, just in case
+	systemctl restart goaccess-hestiacp
 }
 
 
